@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Base System | One-Time License</title>
+  <meta name="description" content="A secure, searchable knowledge base system with Markdown support, full-text retrieval, and role-based permissions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="hero container">
+    <nav class="lang-switch" aria-label="Language switcher">
+      <a class="lang-pill" href="./index.html">中文</a>
+      <a class="lang-pill active" href="./index_english.html" aria-current="page">EN</a>
+    </nav>
+    <p class="eyebrow">Knowledge Base Platform</p>
+    <h1>Turn Knowledge Into a Searchable, Governable, and Deployable Productivity System</h1>
+    <p class="lead">
+      This Knowledge Base system is built for individuals and teams to solve core problems: scattered files, hard-to-find knowledge, and difficult permission management.
+      You can upload common document formats (PDF, Word, Excel, Markdown, CSV, JSON, and more), build your knowledge base, and query it through AI conversations.
+      With role- and department-based permissions, your content remains organized, governed, and truly usable every day.
+    </p>
+    <div class="hero-actions">
+      <button type="button" class="buy-btn" aria-disabled="true">Coming Soon</button>
+      <a href="#policy" class="text-link">View Terms and Refund Policy</a>
+    </div>
+    <div class="hero-tags">
+      <span>Multi-format Document Management</span>
+      <span>Full-text Retrieval + RAG Q&amp;A</span>
+      <span>Real-time SSE Streaming Responses</span>
+      <span>JWT Authentication and Role-based Access Control</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel" id="product">
+      <h2>1. Product Description</h2>
+      <p>
+        The system provides centralized knowledge management with support for multi-category knowledge bases, chat-based querying,
+        prompt configuration, and model management.
+        It is ideal for internal SOPs, customer support knowledge, technical documentation, and operational guidelines.
+      </p>
+      <p>
+        Core capabilities include multi-format file uploads, vector retrieval, cross-document semantic search, conversation history,
+        system prompt management, and integration with OpenAI / Anthropic / Google / AWS Bedrock endpoints.
+      </p>
+      <p>
+        You can use it today to build departmental knowledge bases, enforce read/write scopes, let teammates ask questions in natural language,
+        and manage models and knowledge sources in one interface.
+      </p>
+
+      <div class="screenshots">
+        <figure>
+          <img src="./assets/screenshot-dashboard.png" alt="Knowledge Base dashboard screenshot" loading="lazy" />
+          <figcaption>Screenshot 1: Dashboard and Knowledge Base Management</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/screenshot-chat.png" alt="Knowledge Base chat query screenshot" loading="lazy" />
+          <figcaption>Screenshot 2: Conversational Query and Retrieval Results</figcaption>
+        </figure>
+      </div>
+      <p class="note">You can replace these two placeholders with your real product screenshots later (keep the same filenames).</p>
+    </section>
+
+    <section class="panel" id="pricing">
+      <h2>2. Pricing</h2>
+      <div class="price-box">
+        <div>
+          <p class="price-title">Professional License</p>
+          <p class="price-value">One-time payment <strong>US$30</strong></p>
+          <p class="price-desc">Pay once to get the current license and future minor updates, ideal for solo creators and small teams.</p>
+        </div>
+        <div class="price-actions">
+          <button type="button" class="buy-btn" aria-disabled="true">Buy Now (Coming Soon)</button>
+          <p class="mini-note">You will be able to purchase directly once the checkout page is live.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="policy">
+      <h2>4. Terms, Privacy &amp; Refund</h2>
+      <div class="policy-grid">
+        <article class="policy-card">
+          <h3>Terms of Service</h3>
+          <ul>
+            <li>This product is licensed software, not a physical item.</li>
+            <li>Illegal use, unauthorized resale, reverse engineering, and service abuse are prohibited.</li>
+            <li>You are responsible for safeguarding your account and license credentials.</li>
+            <li>The service is provided "as is," and indirect damages are disclaimed to the extent permitted by law.</li>
+          </ul>
+        </article>
+
+        <article class="policy-card">
+          <h3>Privacy Policy</h3>
+          <ul>
+            <li>We may collect contact details (such as email) and necessary payment/license identifiers.</li>
+            <li>Data is used only for account management, license verification, customer support, and service improvement.</li>
+            <li>We do not sell your personal data to third parties.</li>
+          </ul>
+        </article>
+
+        <article class="policy-card">
+          <h3>Refund Policy</h3>
+          <p>
+            As a digital product, purchases are generally non-refundable.
+            If you prefer a grace policy, you may adopt: "Refund available within 14 days for unresolved major technical issues."
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <section>
+      <h2>3. Contact Information</h2>
+      <p>
+        Email: <a href="mailto:mailkill2000@gmail.com">mailkill2000@gmail.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Business Identity</h2>
+      <p><strong>Juns</strong> - Individual Developer</p>
+    </section>
+
+    <p class="copyright">© <span id="year"></span> Individual Developer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
