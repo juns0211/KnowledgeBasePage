@@ -55,17 +55,20 @@
         and manage models and knowledge sources in one interface.
       </p>
 
-      <div class="screenshots">
-        <figure>
-          <img src="./assets/screenshot-dashboard.png" alt="Knowledge Base dashboard screenshot" loading="lazy" />
-          <figcaption>Screenshot 1: Dashboard and Knowledge Base Management</figcaption>
-        </figure>
-        <figure>
-          <img src="./assets/screenshot-chat.png" alt="Knowledge Base chat query screenshot" loading="lazy" />
-          <figcaption>Screenshot 2: Conversational Query and Retrieval Results</figcaption>
-        </figure>
+      <div class="screenshots-carousel" data-carousel>
+        <button type="button" class="carousel-nav prev" aria-label="Previous slide">&#8249;</button>
+        <div class="screenshots">
+          <figure class="slide">
+            <img src="./assets/screenshot-dashboard.png" alt="Knowledge Base dashboard screenshot" loading="lazy" />
+            <figcaption>Screenshot 1: Dashboard and Knowledge Base Management</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="./assets/screenshot-chat.png" alt="Knowledge Base chat query screenshot" loading="lazy" />
+            <figcaption>Screenshot 2: Conversational Query and Retrieval Results</figcaption>
+          </figure>
+        </div>
+        <button type="button" class="carousel-nav next" aria-label="Next slide">&#8250;</button>
       </div>
-      <p class="note">You can replace these two placeholders with your real product screenshots later (keep the same filenames).</p>
     </section>
 
     <section class="panel" id="pricing">
@@ -84,7 +87,7 @@
     </section>
 
     <section class="panel" id="policy">
-      <h2>4. Terms, Privacy &amp; Refund</h2>
+      <h2>3. Terms, Privacy &amp; Refund</h2>
       <div class="policy-grid">
         <article class="policy-card">
           <h3>Terms of Service</h3>
@@ -118,9 +121,9 @@
 
   <footer class="footer container">
     <section>
-      <h2>3. Contact Information</h2>
+      <h2>4. Contact Information</h2>
       <p>
-        Email: <a href="mailto:mailkill2000@gmail.com">mailkill2000@gmail.com</a>
+        Email: <a href="mailto:juns.chen.dev@gmail.com">juns.chen.dev@gmail.com</a>
       </p>
     </section>
 
@@ -132,8 +135,110 @@
     <p class="copyright">© <span id="year"></span> Individual Developer. All rights reserved.</p>
   </footer>
 
+  <div class="lightbox" id="imageLightbox" hidden>
+    <div class="lightbox-inner">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <img class="lightbox-image" id="lightboxImage" src="" alt="Enlarged screenshot" />
+    </div>
+  </div>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+      const track = carousel.querySelector(".screenshots");
+      const prevBtn = carousel.querySelector(".carousel-nav.prev");
+      const nextBtn = carousel.querySelector(".carousel-nav.next");
+
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const updateButtons = () => {
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        prevBtn.disabled = track.scrollLeft <= 2;
+        nextBtn.disabled = track.scrollLeft >= maxScrollLeft - 2;
+      };
+
+      const slideToNext = () => {
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        const nextLeft = track.scrollLeft + track.clientWidth;
+        if (nextLeft >= maxScrollLeft - 2) {
+          track.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          track.scrollBy({ left: Math.round(track.clientWidth), behavior: "smooth" });
+        }
+      };
+
+      let autoplayTimer = null;
+      const startAutoplay = () => {
+        if (autoplayTimer) return;
+        autoplayTimer = window.setInterval(slideToNext, 6000);
+      };
+
+      const resetAutoplay = () => {
+        if (autoplayTimer) {
+          window.clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+        startAutoplay();
+      };
+
+      prevBtn.addEventListener("click", () => {
+        track.scrollBy({ left: -Math.round(track.clientWidth), behavior: "smooth" });
+        resetAutoplay();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        track.scrollBy({ left: Math.round(track.clientWidth), behavior: "smooth" });
+        resetAutoplay();
+      });
+
+      track.addEventListener("scroll", updateButtons, { passive: true });
+      track.addEventListener("pointerdown", resetAutoplay);
+      window.addEventListener("resize", updateButtons);
+      updateButtons();
+      startAutoplay();
+    });
+
+    const lightbox = document.getElementById("imageLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    const openLightbox = (src, alt) => {
+      if (!lightbox || !lightboxImage) return;
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || "Enlarged screenshot";
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeLightbox = () => {
+      if (!lightbox || !lightboxImage) return;
+      lightbox.hidden = true;
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    };
+
+    document.querySelectorAll(".screenshots .slide img").forEach((img) => {
+      img.addEventListener("click", () => openLightbox(img.currentSrc || img.src, img.alt));
+    });
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", closeLightbox);
+    }
+
+    if (lightbox) {
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox && !lightbox.hidden) {
+        closeLightbox();
+      }
+    });
   </script>
 </body>
 </html>
