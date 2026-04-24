@@ -365,13 +365,13 @@ figcaption {
 .buy-btn {
   border: 0;
   border-radius: 999px;
-  padding: 12px 24px;
+  padding: 12px 40px;
   background: linear-gradient(180deg, #1990ff, var(--brand));
   color: #fff;
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.01em;
-  cursor: not-allowed;
+  cursor: pointer;;
   box-shadow: 0 10px 24px rgba(0, 113, 227, 0.35);
 }
 
