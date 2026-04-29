@@ -1,287 +1,198 @@
 <!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Knowledge Base System | One-Time License</title>
-  <meta name="description" content="A secure, searchable knowledge base system with Markdown support, full-text retrieval, and role-based permissions." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <div class="bg-gradient" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
+<html lang="zh-Hant" data-lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">AI Knowledge Base — 私人空間的 AI 知識庫系統</title>
+    <meta name="description" data-i18n-attr="content" data-i18n="meta.description"
+          content="為個人與團隊量身打造的私人 AI 知識庫系統,徹底解決文件分散、搜尋困難、權限混亂的核心痛點。" />
+    <meta property="og:title" content="AI Knowledge Base — 私人空間的 AI 知識庫系統" />
+    <meta property="og:description" content="集中式知識管理,支援多格式文件、向量化檢索、跨文件語意查詢與多模型整合。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://juns0211.github.io/KnowledgeBasePage/assets/chat.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <header class="hero container">
-    <nav class="lang-switch" aria-label="Language switcher">
-      <a class="lang-pill active" href="./index.html" aria-current="page">中文</a>
-      <a class="lang-pill" href="./index_english.html">EN</a>
-    </nav>
-    <p class="eyebrow">Knowledge Base Platform</p>
-    <h1>將重要資料存放在私人空間的AI知識庫系統</h1>
-    <p class="lead" style="text-align: left;">
-      這是一套為個人與團隊量身打造的<strong>私人知識庫系統</strong>，徹底解決文件分散、搜尋困難、權限混亂及資料放雲端等核心痛點。
-      只需上傳常見文件，即可利用 AI 對話隨時喚醒沈睡的資料。結合細緻的部門權限管理，讓知識不僅是儲存，更能成為團隊隨手可得的智慧大腦。
-    </p>
-    </p>
-    <div class="hero-actions">
-      <a role="button" class="buy-btn" href="https://aiknowledgebase.lemonsqueezy.com/checkout/buy/7656e84d-32a5-439e-a83d-b0e71862eea2">Buy Now</a>
-      <a href="#policy" class="text-link">查看條款與退款政策</a>
-    </div>
-    <div class="hero-tags">
-      <span>多格式文件管理</span>
-      <span>全文檢索 + RAG 問答</span>
-      <span>SSE 即時串流回覆</span>
-      <span>JWT 驗證與角色權限控管</span>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="panel" id="product">
-      <h2>1. 產品描述 Product Description</h2>
-      <p>
-        本系統提供集中式知識管理，支援多類別知識庫、聊天式查詢、Prompt 設定與模型管理。
-        適合內部 SOP、客服知識、技術文件與營運規範的統一管理與快速檢索。
-      </p>
-      <p>
-        核心能力包含：多格式文件上傳、向量化檢索、跨文件語意查詢、會話歷史、
-        系統提示詞管理，以及 OpenAI / Anthropic / Google / AWS Bedrock 端點整合。
-      </p>
-      <p>
-        你現在就能用它完成：建立部門知識庫、限制可讀可寫範圍、讓同事以自然語言提問，
-        並在同一個介面中管理模型與知識來源。
-      </p>
-
-      <div class="screenshots-carousel" data-carousel>
-        <button type="button" class="carousel-nav prev" aria-label="上一張">&#8249;</button>
-        <div class="screenshots">
-          <!--<figure class="slide">
-            <img src="./assets/screenshot-dashboard.png" alt="Knowledge Base 系統主控台截圖" loading="lazy" />
-            <figcaption>系統截圖 1：主控台與知識庫管理</figcaption>
-          </figure>
-          <figure class="slide">
-            <img src="./assets/screenshot-chat.png" alt="Knowledge Base 對話查詢截圖" loading="lazy" />
-            <figcaption>系統截圖 2：對話式查詢與檢索結果</figcaption>
-          </figure>-->
-          <figure class="slide">
-            <img src="./assets/chat.png" alt="Knowledge Base 對話窗" loading="lazy" />
-            <figcaption>系統截圖 1：對話式查詢與檢索結果</figcaption>
-          </figure>
-            <figure class="slide">
-            <img src="./assets/dept.png" alt="Knowledge Base 成員管理" loading="lazy" />
-            <figcaption>系統截圖 2：成員分類管理</figcaption>
-          </figure>
-            <figure class="slide">
-            <img src="./assets/km.png" alt="Knowledge Base 知識上傳" loading="lazy" />
-            <figcaption>系統截圖 3：簡單易懂的知識上傳方式</figcaption>
-          </figure>
-            <figure class="slide">
-            <img src="./assets/km-category.png" alt="Knowledge Base 部門管理" loading="lazy" />
-            <figcaption>系統截圖 4：靈活的知識內容分類授權</figcaption>
-          </figure>
-            <figure class="slide">
-            <img src="./assets/model.png" alt="Knowledge Base 模型管理" loading="lazy" />
-            <figcaption>系統截圖 5：靈活支援各類主流模型</figcaption>
-          </figure>
-            <figure class="slide">
-            <img src="./assets/prompt.png" alt="Knowledge Base 提示詞管理" loading="lazy" />
-            <figcaption>系統截圖 6：靈活提示AI思考方式</figcaption>
-          </figure>
-            <figure class="slide">
-            <img src="./assets/user.png" alt="Knowledge Base 使用者管理" loading="lazy" />
-            <figcaption>系統截圖 7：透過管理員新增你想要一起使用的用戶</figcaption>
-          </figure>
-        </div>
-        <button type="button" class="carousel-nav next" aria-label="下一張">&#8250;</button>
-      </div>
-    </section>
-
-    <section class="panel" id="pricing">
-      <h2>2. 定價資訊 Pricing</h2>
-      <div class="price-box">
-        <div>
-          <p class="price-title">Professional License</p>
-          <p class="price-value">One-time payment <strong>US$30</strong></p>
-          <p class="price-desc">一次購買，取得目前版本授權與後續小版本更新，適合個人創作者與中小團隊。</p>
-        </div>
-        <div class="price-actions">
-          <a role="button" class="buy-btn" href="https://aiknowledgebase.lemonsqueezy.com/checkout/buy/7656e84d-32a5-439e-a83d-b0e71862eea2">Buy Now</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="#top" class="nav-brand">
+          <span class="brand-mark"><span class="brand-mark-glow"></span><span class="brand-mark-dot"></span></span>
+          <span>Knowledge Base</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#features" data-i18n="nav.features">功能</a>
+          <a href="#pricing" data-i18n="nav.pricing">定價</a>
+          <a href="#deploy" data-i18n="nav.deploy">部署</a>
+          <a href="#policies" data-i18n="nav.policies">條款</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switch" role="tablist">
+            <button data-lang="zh" class="active">中文</button>
+            <button data-lang="en">EN</button>
+          </div>
+          <a class="btn btn-dark btn-sm nav-buy" href="#" target="_blank" rel="noopener" data-i18n="nav.buy">購買</a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section class="panel" id="deployment">
-      <h2>3. 多元的部署方式 Deployment Modes</h2>
-      <div class="deployment-grid">
-        <article class="deployment-card">
-          <h3>Docker自行部署</h3>
-          <p>
-            您可自由選擇您的部署位置，透過Docker Compose檔案，部署在您想要的位置。
+    <main>
+      <!-- ============ HERO ============ -->
+      <section id="top" class="hero">
+        <div class="bg-mesh" aria-hidden="true"></div>
+        <div class="bg-grid mask-fade" aria-hidden="true"></div>
+        <div class="hero-orb" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+          <div class="eyebrow shimmer-border reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ico-sparkle">
+              <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>
+            </svg>
+            <span data-i18n="hero.eyebrow">KNOWLEDGE BASE PLATFORM</span>
+          </div>
+
+          <h1 class="hero-title reveal" style="animation-delay:.1s">
+            <span class="text-gradient" data-i18n="hero.titleA">將重要資料存放在</span>
+            <span class="text-iridescent" data-i18n="hero.titleB">私人空間</span>
+            <span class="text-gradient" data-i18n="hero.titleC">的 AI 知識庫系統</span>
+          </h1>
+
+          <p class="hero-sub reveal" style="animation-delay:.2s" data-i18n="hero.subtitle">
+            這是一套為個人與團隊量身打造的私人知識庫系統,徹底解決文件分散、搜尋困難、權限混亂及資料放雲端等核心痛點。只需上傳常見文件,即可利用 AI 對話隨時喚醒沈睡的資料。
           </p>
-        </article>
-        <article class="deployment-card">
-          <h3>一鍵部署</h3>
-          <p>
-            透過Zeabur平台提供的一鍵部署方案，您可以輕鬆地將服務部署到私人環境，無需繁瑣的設定過程。
-          </p>
-        </article>
+
+          <div class="hero-cta reveal" style="animation-delay:.3s">
+            <a class="btn btn-dark btn-lg" id="hero-buy" href="#" target="_blank" rel="noopener">
+              <span data-i18n="hero.buy">Buy Now — US$30</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ico-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#policies" class="hero-secondary" data-i18n="hero.secondary">查看條款與退款政策</a>
+          </div>
+
+          <div class="hero-chips reveal" style="animation-delay:.4s" id="hero-chips"></div>
+        </div>
+      </section>
+
+      <!-- ============ DESCRIPTION ============ -->
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-eyebrow" data-i18n="description.eyebrow">01 — Product</p>
+            <h2 class="section-title text-gradient" data-i18n="description.title">為團隊打造的智慧大腦</h2>
+            <p class="section-lead" data-i18n="description.lead">集中式知識管理,讓知識不僅是儲存,更能成為團隊隨手可得的資源。</p>
+          </div>
+          <div class="grid grid-3" id="desc-grid"></div>
+        </div>
+      </section>
+
+      <!-- ============ SHOWCASE ============ -->
+      <section class="section showcase">
+        <div class="bg-mesh-soft" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-head section-head-center reveal">
+            <p class="section-eyebrow" data-i18n="showcase.eyebrow">02 — In action</p>
+            <h2 class="section-title text-gradient" data-i18n="showcase.title">看看它的樣子</h2>
+            <p class="section-lead" data-i18n="showcase.lead">從對話查詢到權限管理,每個介面都經過細心設計。</p>
+          </div>
+
+          <div class="showcase-wrap reveal">
+            <div class="showcase-glow" aria-hidden="true"></div>
+            <div class="window">
+              <div class="window-bar">
+                <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                <span class="window-caption" id="showcase-caption">01 / 07</span>
+              </div>
+              <div class="window-body">
+                <img id="showcase-img" alt="" />
+              </div>
+            </div>
+            <button class="nav-arrow nav-arrow-left" id="showcase-prev" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="nav-arrow nav-arrow-right" id="showcase-next" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="thumbs" id="showcase-thumbs"></div>
+        </div>
+      </section>
+
+      <!-- ============ PRICING ============ -->
+      <section id="pricing" class="section">
+        <div class="container">
+          <div class="section-head section-head-center reveal">
+            <p class="section-eyebrow" data-i18n="pricing.eyebrow">03 — Pricing</p>
+            <h2 class="section-title text-gradient" data-i18n="pricing.title">一次購買,長久擁有</h2>
+          </div>
+
+          <div class="pricing-wrap reveal">
+            <div class="pricing-glow" aria-hidden="true"></div>
+            <div class="pricing-card">
+              <div class="pricing-top-line"></div>
+              <div class="pricing-blob pricing-blob-1"></div>
+              <div class="pricing-blob pricing-blob-2"></div>
+              <div class="pricing-content">
+                <div class="pricing-row">
+                  <span class="tag" data-i18n="pricing.planTag">Professional License</span>
+                  <span class="muted-mono" data-i18n="pricing.priceNote">One-time payment</span>
+                </div>
+                <div class="pricing-price">
+                  <span class="text-iridescent" data-i18n="pricing.price">US$30</span>
+                </div>
+                <p class="pricing-desc" data-i18n="pricing.desc"></p>
+                <ul class="pricing-list" id="pricing-list"></ul>
+                <a id="pricing-buy" class="btn btn-dark btn-lg btn-block" href="#" target="_blank" rel="noopener">
+                  <span data-i18n="pricing.cta">立即購買</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ico-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DEPLOYMENT ============ -->
+      <section id="deploy" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-eyebrow" data-i18n="deploy.eyebrow">04 — Deployment</p>
+            <h2 class="section-title text-gradient" data-i18n="deploy.title">用你習慣的方式部署</h2>
+            <p class="section-lead" data-i18n="deploy.lead"></p>
+          </div>
+          <div class="grid grid-2" id="deploy-grid"></div>
+        </div>
+      </section>
+
+      <!-- ============ POLICIES ============ -->
+      <section id="policies" class="section">
+        <div class="container container-narrow">
+          <div class="section-head section-head-center reveal">
+            <p class="section-eyebrow" data-i18n="policies.eyebrow">05 — Policies</p>
+            <h2 class="section-title text-gradient" data-i18n="policies.title">服務條款與隱私政策</h2>
+          </div>
+          <div class="accordion reveal" id="policies-accordion"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark"><span class="brand-mark-dot"></span></span>
+          <span>Knowledge Base</span>
+        </div>
+        <p class="footer-rights">© <span id="footer-year"></span> · <span data-i18n="footer.rights">版權所有</span></p>
+        <a href="mailto:contact@aiknowledgebase.app" data-i18n="footer.contact">聯繫我們</a>
       </div>
-    </section>
-    <section class="panel" id="policy">
-      <h2>4. 服務條款與隱私政策 Terms, Privacy & Refund</h2>
-      <div class="policy-grid">
-        <article class="policy-card">
-          <h3>Terms of Service</h3>
-          <ul>
-            <li>本產品為軟體授權（license），非實體商品。</li>
-            <li>禁止任何非法用途、未授權轉售、逆向工程或破壞服務之行為。</li>
-            <li>你應自行妥善保管帳號與授權資訊，對帳號使用行為負責。</li>
-            <li>本服務按現狀提供，在法律允許範圍內不承擔間接損害責任。</li>
-            <li>本服務支援免費的服務更新及優化，您只要重新安裝本服務即可取得最新版本的功能與修復。</li>
-          </ul>
-        </article>
+    </footer>
 
-        <article class="policy-card">
-          <h3>Privacy Policy</h3>
-          <ul>
-            <li>我們可能收集聯絡資訊（例如 Email）與必要的付款/授權識別資料。</li>
-            <li>資料僅用於帳號管理、授權驗證、客戶支援與服務改善。</li>
-            <li>您儲存的所有知識庫資料都保存在您個人啟動的資料庫中, 我們無法查閱其內容。</li>
-          </ul>
-        </article>
-
-        <article class="policy-card">
-          <h3>Refund Policy</h3>
-          <ul>
-            <li>數位產品購買後，原則上不提供退款。如產品上有重大瑕疵，在購買後7天內，您可透過下方聯繫資訊，並附上發生狀況的截圖，我們仍會同意您的退款。</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer container">
-    <section>
-      <h2>5. 聯絡資訊 Contact</h2>
-      <p>
-        Email: <a href="mailto:juns.chen.dev@gmail.com">juns.chen.dev@gmail.com</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>6. 商業實體資訊 Business Identity</h2>
-      <p><strong>Juns</strong> - Individual Developer</p>
-    </section>
-
-    <p class="copyright">© <span id="year"></span> Individual Developer. All rights reserved.</p>
-  </footer>
-
-  <div class="lightbox" id="imageLightbox" hidden>
-    <div class="lightbox-inner">
-      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="關閉">&times;</button>
-      <img class="lightbox-image" id="lightboxImage" src="" alt="放大截圖" />
-    </div>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-      const track = carousel.querySelector(".screenshots");
-      const prevBtn = carousel.querySelector(".carousel-nav.prev");
-      const nextBtn = carousel.querySelector(".carousel-nav.next");
-
-      if (!track || !prevBtn || !nextBtn) return;
-
-      const updateButtons = () => {
-        const maxScrollLeft = track.scrollWidth - track.clientWidth;
-        prevBtn.disabled = track.scrollLeft <= 2;
-        nextBtn.disabled = track.scrollLeft >= maxScrollLeft - 2;
-      };
-
-      const slideToNext = () => {
-        const maxScrollLeft = track.scrollWidth - track.clientWidth;
-        const nextLeft = track.scrollLeft + track.clientWidth;
-        if (nextLeft >= maxScrollLeft - 2) {
-          track.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          track.scrollBy({ left: Math.round(track.clientWidth), behavior: "smooth" });
-        }
-      };
-
-      let autoplayTimer = null;
-      const startAutoplay = () => {
-        if (autoplayTimer) return;
-        autoplayTimer = window.setInterval(slideToNext, 6000);
-      };
-
-      const resetAutoplay = () => {
-        if (autoplayTimer) {
-          window.clearInterval(autoplayTimer);
-          autoplayTimer = null;
-        }
-        startAutoplay();
-      };
-
-      prevBtn.addEventListener("click", () => {
-        track.scrollBy({ left: -Math.round(track.clientWidth), behavior: "smooth" });
-        resetAutoplay();
-      });
-
-      nextBtn.addEventListener("click", () => {
-        track.scrollBy({ left: Math.round(track.clientWidth), behavior: "smooth" });
-        resetAutoplay();
-      });
-
-      track.addEventListener("scroll", updateButtons, { passive: true });
-      track.addEventListener("pointerdown", resetAutoplay);
-      window.addEventListener("resize", updateButtons);
-      updateButtons();
-      startAutoplay();
-    });
-
-    const lightbox = document.getElementById("imageLightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxClose = document.getElementById("lightboxClose");
-
-    const openLightbox = (src, alt) => {
-      if (!lightbox || !lightboxImage) return;
-      lightboxImage.src = src;
-      lightboxImage.alt = alt || "放大截圖";
-      lightbox.hidden = false;
-      document.body.style.overflow = "hidden";
-    };
-
-    const closeLightbox = () => {
-      if (!lightbox || !lightboxImage) return;
-      lightbox.hidden = true;
-      lightboxImage.src = "";
-      document.body.style.overflow = "";
-    };
-
-    document.querySelectorAll(".screenshots .slide img").forEach((img) => {
-      img.addEventListener("click", () => openLightbox(img.currentSrc || img.src, img.alt));
-    });
-
-    if (lightboxClose) {
-      lightboxClose.addEventListener("click", closeLightbox);
-    }
-
-    if (lightbox) {
-      lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-    }
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && lightbox && !lightbox.hidden) {
-        closeLightbox();
-      }
-    });
-  </script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
