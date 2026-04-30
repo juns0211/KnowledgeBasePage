@@ -420,8 +420,12 @@ body {
   background: hsl(var(--secondary) / .4);
   border-radius: 12px;
   overflow: hidden;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.window-body img { width: 100%; height: auto; display: block; animation: fade-in .5s var(--ease); }
+.window-body img { width: 100%; height: 100%; object-fit: contain; display: block; animation: fade-in .5s var(--ease); }
 
 .nav-arrow {
   display: none;
