@@ -3,7 +3,7 @@
    ========================================================= */
 
 const BUY_URL =
-  "https://aiknowledgebase.lemonsqueezy.com/checkout/buy/7656e84d-32a5-439e-a83d-b0e71862eea2";
+  "https://aiknowledgebase.lemonsqueezy.com/checkout/buy/cb8e375b-a663-4f53-9776-97b54014bba0";
 
 const I18N = {
   zh: {
