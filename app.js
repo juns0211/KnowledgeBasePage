@@ -35,31 +35,30 @@ const I18N = {
     },
     showcase: {
       eyebrow: "02 — In action",
-      title: "看看它的樣子",
-      lead: "從對話查詢到權限管理,每個介面都經過細心設計。",
-      shots: [
-        { src: "assets/chat.png", caption: "對話式查詢與檢索結果" },
-        { src: "assets/dept.png", caption: "成員分類管理" },
-        { src: "assets/km.png", caption: "簡單易懂的知識上傳方式" },
-        { src: "assets/km-category.png", caption: "靈活的知識內容分類授權" },
-        { src: "assets/model.png", caption: "靈活支援各類主流模型" },
-        { src: "assets/prompt.png", caption: "靈活提示 AI 思考方式" },
-        { src: "assets/user.png", caption: "透過管理員新增一起使用的用戶" },
+      title: "看看它能做什麼",
+      lead: "從語意搜尋到權限管理，核心功能一覽。",
+      features: [
+        { title: "語意搜尋", body: "用自然語言提問，AI 從你的文件中精準找到答案，不再靠關鍵字碰運氣。" },
+        { title: "多格式文件上傳", body: "支援 PDF、Word、TXT 等格式，拖曳即可上傳，知識庫隨時擴充。" },
+        { title: "多模型自由切換", body: "整合 OpenAI、Anthropic、Google、AWS Bedrock，一個介面管理所有模型。" },
+        { title: "部門知識庫分類", body: "建立多個知識庫，按部門或主題分類，讓不同團隊各自管理自己的資料。" },
+        { title: "角色與權限控管", body: "管理員設定誰能讀、誰能寫，資料嚴格隔離，不怕內部資訊外洩。" },
+        { title: "對話歷史紀錄", body: "每次查詢自動保存，隨時回顧過去的對話，知識不因關閉視窗而消失。" },
       ],
     },
     pricing: {
       eyebrow: "03 — Pricing", title: "一次購買,長久擁有",
       planTag: "Professional License", price: "US$30", priceNote: "One-time payment",
-      desc: "一次購買,取得目前版本授權與後續小版本更新。適合個人創作者與中小團隊。",
-      includes: ["無限知識庫與文件數量", "全部 AI 模型整合 (OpenAI / Anthropic / Google / Bedrock)", "JWT 驗證與角色權限控管", "免費取得後續小版本更新"],
+      desc: "一次購買,取得目前版本授權與後續小版本更新。適合個人創作者與中小團隊。AI 使用費用（如 OpenAI、Anthropic）需另行向各平台申請 API Key 支付。",
+      includes: ["無限知識庫與文件數量", "支援全部主流 AI 模型整合（需自備 API Key，費用由各平台另行收取）", "JWT 驗證與角色權限控管", "免費取得後續小版本更新"],
       cta: "立即購買",
     },
     deploy: {
       eyebrow: "04 — Deployment", title: "用你習慣的方式部署",
-      lead: "無論你想完全掌控還是一鍵上線,都能滿足。",
+      lead: "透過Docker安裝或Zeabur安裝",
       modes: [
-        { title: "Docker 自行部署", body: "您可自由選擇您的部署位置,透過 Docker Compose 檔案,部署在您想要的位置。" },
-        { title: "Zeabur 一鍵部署", body: "透過 Zeabur 平台提供的一鍵部署方案,輕鬆地將服務部署到私人環境,無需繁瑣的設定過程。" },
+        { title: "Docker 自行部署", body: "收到 docker-compose.yml 後，執行 docker compose up -d，映像檔自動從 ghcr.io 下載。無需自行編譯，無需設定環境變數。AI 模型 API Key 皆可在管理介面直接填寫，任你選配。" },
+        { title: "Zeabur 一鍵部署超EASY", body: "下單後取得專屬 Template 連結，點擊部署、設定網域即可上線。無需本機安裝任何環境。需自備 Zeabur 帳號（費用由 Zeabur 另行收取）。服務上線後在頁面輸入 License Key 完成授權啟用。" },
       ],
     },
     policies: {
@@ -112,31 +111,30 @@ const I18N = {
     },
     showcase: {
       eyebrow: "02 — In action",
-      title: "See how it looks",
-      lead: "From chat queries to permission management, every screen is thoughtfully crafted.",
-      shots: [
-        { src: "assets/chat.png", caption: "Conversational search & retrieval" },
-        { src: "assets/dept.png", caption: "Member & department management" },
-        { src: "assets/km.png", caption: "Simple knowledge uploads" },
-        { src: "assets/km-category.png", caption: "Flexible category permissions" },
-        { src: "assets/model.png", caption: "Support for major AI models" },
-        { src: "assets/prompt.png", caption: "Shape how the AI thinks" },
-        { src: "assets/user.png", caption: "Invite users via admin" },
+      title: "What it can do",
+      lead: "Core features at a glance — from semantic search to access control.",
+      features: [
+        { title: "Semantic Search", body: "Ask in plain language. The AI finds the right answer from your documents — no keyword guessing." },
+        { title: "Multi-format Upload", body: "Supports PDF, Word, TXT and more. Drag, drop, and your knowledge base grows instantly." },
+        { title: "Switch AI Models Freely", body: "Integrates with OpenAI, Anthropic, Google and AWS Bedrock — manage everything from one interface." },
+        { title: "Department Knowledge Bases", body: "Create multiple knowledge bases by team or topic. Each department manages its own data." },
+        { title: "Role-based Access Control", body: "Admins control who can read or write. Data stays isolated and secure." },
+        { title: "Conversation History", body: "Every query is saved automatically. Revisit past conversations anytime — nothing gets lost." },
       ],
     },
     pricing: {
       eyebrow: "03 — Pricing", title: "Buy once, own it",
       planTag: "Professional License", price: "US$30", priceNote: "One-time payment",
-      desc: "Get the current version license plus all minor updates. Made for solo creators and small-to-mid teams.",
-      includes: ["Unlimited knowledge bases & documents", "All AI integrations (OpenAI / Anthropic / Google / Bedrock)", "JWT auth & role-based access control", "Free minor version updates"],
+      desc: "Get the current version license plus all minor updates. Made for solo creators and small-to-mid teams. AI usage fees (e.g. OpenAI, Anthropic) are billed separately by each provider.",
+      includes: ["Unlimited knowledge bases & documents", "All major AI model integrations (bring your own API key — billed by each provider)", "JWT auth & role-based access control", "Free minor version updates"],
       cta: "Buy Now",
     },
     deploy: {
       eyebrow: "04 — Deployment", title: "Deploy your way",
-      lead: "Whether you want full control or one-click ease, you're covered.",
+      lead: "Install Docker. That's the only technical step.",
       modes: [
-        { title: "Self-host with Docker", body: "Pick your own infrastructure and deploy with a simple Docker Compose file — wherever you want it." },
-        { title: "One-click on Zeabur", body: "Deploy to a private environment in a single click via Zeabur — no complicated setup required." },
+        { title: "Self-host with Docker", body: "After purchase, run docker compose up -d — the image pulls automatically from ghcr.io. No build step, no environment files. API keys for OpenAI, Anthropic, Google and more are set directly in the admin UI." },
+        { title: "One-click on Zeabur", body: "After purchase, you'll receive a private Zeabur template link. Click deploy, set your domain, and you're live — no local setup required. A Zeabur account is needed (billed separately by Zeabur). Enter your License Key on the live page to activate." },
       ],
     },
     policies: {
@@ -168,6 +166,10 @@ const ICONS = {
   database: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>',
   sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3z"/><path d="M19 14l.7 1.8L21.5 16.5l-1.8.7L19 19l-.7-1.8L16.5 16.5l1.8-.7L19 14z"/></svg>',
   users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
+  file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
+  lock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
   container: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7.7v8.6a2 2 0 0 1-1 1.74l-7 4a2 2 0 0 1-2 0l-7-4A2 2 0 0 1 4 16.3V7.7A2 2 0 0 1 5 5.96l7-4a2 2 0 0 1 2 0l7 4A2 2 0 0 1 22 7.7z"/><path d="M10 22V12"/><path d="M14 22V12"/><path d="M2 7l10 5 10-5"/></svg>',
   zap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
   check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
@@ -175,11 +177,11 @@ const ICONS = {
 };
 
 const DESC_ICONS = ['database', 'sparkles', 'users'];
+const FEATURE_ICONS = ['search', 'file', 'sparkles', 'database', 'lock', 'clock'];
 const DEPLOY_ICONS = ['container', 'zap'];
 
 /* ---------------- State ---------------- */
 let lang = 'zh';
-let shotIdx = 0;
 
 /* ---------------- Render functions ---------------- */
 function renderAll() {
@@ -243,8 +245,8 @@ function renderAll() {
     .join('');
   bindAccordion();
 
-  // Showcase
-  renderShowcase();
+  // Features
+  renderFeatures();
 
   // Re-arm reveal animations on language change (so they re-trigger if needed)
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
@@ -262,37 +264,13 @@ function cardHtml(b, i, iconKey, large) {
     </div>`;
 }
 
-function renderShowcase() {
+function renderFeatures() {
   const t = I18N[lang].showcase;
-  const total = t.shots.length;
-  if (shotIdx >= total) shotIdx = 0;
-  const shot = t.shots[shotIdx];
-  document.getElementById('showcase-img').src = shot.src;
-  document.getElementById('showcase-img').alt = shot.caption;
-  document.getElementById('showcase-caption').textContent =
-    `${String(shotIdx + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')} · ${shot.caption}`;
-
-  // restart fade-in
-  const img = document.getElementById('showcase-img');
-  img.style.animation = 'none';
-  void img.offsetWidth;
-  img.style.animation = '';
-
-  const thumbsEl = document.getElementById('showcase-thumbs');
-  thumbsEl.innerHTML = t.shots
-    .map(
-      (s, i) =>
-        `<button class="thumb ${i === shotIdx ? 'active' : ''}" data-idx="${i}" aria-label="${escape(s.caption)}">
-          <img src="${s.src}" alt="" loading="lazy" />
-        </button>`
-    )
+  const el = document.getElementById('features-grid');
+  el.innerHTML = t.features
+    .map((f, i) => cardHtml(f, i, FEATURE_ICONS[i], false))
     .join('');
-  thumbsEl.querySelectorAll('.thumb').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      shotIdx = Number(btn.dataset.idx);
-      renderShowcase();
-    });
-  });
+  el.querySelectorAll('.reveal').forEach((e) => observer.observe(e));
 }
 
 /* ---------------- Accordion ---------------- */
@@ -338,18 +316,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.lang-switch button').forEach((b) => b.classList.toggle('active', b === btn));
       renderAll();
     });
-  });
-
-  // Showcase arrows
-  document.getElementById('showcase-prev').addEventListener('click', () => {
-    const total = I18N[lang].showcase.shots.length;
-    shotIdx = (shotIdx - 1 + total) % total;
-    renderShowcase();
-  });
-  document.getElementById('showcase-next').addEventListener('click', () => {
-    const total = I18N[lang].showcase.shots.length;
-    shotIdx = (shotIdx + 1) % total;
-    renderShowcase();
   });
 
   renderAll();
